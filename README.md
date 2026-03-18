@@ -1,3 +1,56 @@
+# Iris Biometrics Case Study — Biometrics, IMCV Master, University of Vigo
+
+**Authors:** Gagandeep Kaur, Eda Ozge Ozler  
+**Date:** March 2026  
+**Topic:** Iris biometrics: from Daugman's classical system to deep learning
+
+---
+
+## Case Study Overview
+
+This repository is a fork of the original Masek/Kovesi Python iris recognition system (see original README below). We extend it with three experiment scripts that evaluate the classical pipeline on CASIA-IrisV1 and compare it against a fine-tuned ResNet18 deep learning approach.
+
+## Our Scripts
+
+| File | Description |
+|---|---|
+| `casia_experiment.py` | Classical pipeline evaluation — EER, 5-seed stability test, result plots |
+| `finetune_resnet18.py` | ResNet18 fine-tuning on CASIA iris identities + comparison against classical |
+| `generate_pipeline_figure.py` | Pipeline stage visualisation (segmentation, rubber sheet, IrisCode, DL matching) |
+
+## Dataset
+
+CASIA-IrisV1 — 108 subjects, 7 images each, 756 total.  
+Place images in `CASIA-database/` in the repo root.  
+Download: http://www.cbsr.ia.ac.cn/english/IrisDatabase.asp
+
+## Requirements
+
+```bash
+pip install torch torchvision opencv-python matplotlib scipy numpy
+```
+
+## How to Run
+
+```bash
+source iris_env/bin/activate
+
+python casia_experiment.py          # classical pipeline  (~40 min)
+python finetune_resnet18.py         # ResNet18 comparison (~45 min first run)
+python generate_pipeline_figure.py  # pipeline figure     (~3 min)
+```
+
+## Results
+
+| Method | EER |
+|---|---|
+| Classical (Masek/Kovesi) | 8.67% |
+| ResNet18 (ImageNet only) | 7.64% |
+| ResNet18 (Fine-tuned on CASIA) | **1.39%** |
+
+---
+---
+
 # Iris Recognition
 
 I build an `Iris-Recognition system`, implemented on both Matlab and Python languages.
