@@ -1,4 +1,4 @@
-# Iris Biometrics Case Study — Biometrics, IMCV Master, University of Vigo
+# Iris Biometrics Case Study — Biometrics, IMCV Master, University of Santiago de Compostela
 
 **Authors:** Gagandeep Kaur, Eda Ozge Ozler  
 **Date:** March 2026  
