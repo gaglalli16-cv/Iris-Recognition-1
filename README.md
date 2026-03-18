@@ -48,6 +48,15 @@ python generate_pipeline_figure.py  # pipeline figure     (~3 min)
 | ResNet18 (ImageNet only) | 7.64% |
 | ResNet18 (Fine-tuned on CASIA) | **1.39%** |
 
+### Classical Pipeline — Score Distributions, Error Curves, ROC
+![Classical Results](pics/results_seed42.png)
+
+### Pipeline Stage Comparison — Classical vs Deep Learning
+![Pipeline Comparison](pics/fig1_pipeline_comparison.png)
+
+### ResNet18 Fine-tuning Effect
+![Fine-tuning Results](pics/fig_resnet18_finetuned.png)
+
 ---
 ---
 
